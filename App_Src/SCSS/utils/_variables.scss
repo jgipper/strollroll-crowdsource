@@ -1,0 +1,42 @@
+$base-href: '/case-studies/';
+
+$color-primary: #22407d;
+$color-primary-text: #fff;
+$color-secondary: #007fad;
+$color-secondary-text: #fff;
+$color-accent: #fdb81e;//#C55416
+$color-accent-text: #d0490f;
+$color-divider: #d0d3d7;
+$color-text: #4f5666;
+$color-subdued: #5a74a3;
+$color-grey: #c0c0c4;
+
+$color-links: $color-secondary;
+
+$gutter: 1.5em;
+
+$breakpoint-small: 550px;
+$breakpoint-medium: 900px;
+$breakpoint-large: 1100px;
+
+$toolbar-height:  #{$gutter * 4};
+$footer-height: #{$gutter * 2};
+
+$slab-serif: 'Zilla Slab',serif;
+$sans-serif: 'Barlow', sans-serif;
+
+$font-primary: $sans-serif;
+$font-secondary: $slab-serif;
+
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "#{$base-href}/include/fonts" !default;
+
+$icon-expand_more: "\e909";
+$icon-expand_less: "\e90a";
+$icon-keyboard_arrow_right: "\e907";
+$icon-keyboard_arrow_left: "\e908";
+$icon-marker-brt: "\e900";
+$icon-marker-hr: "\e901";
+$icon-marker-cr: "\e902";
+$icon-marker-lrt: "\e903";
+$icon-marker-sc: "\e905";

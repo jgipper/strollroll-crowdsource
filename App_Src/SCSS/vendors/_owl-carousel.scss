@@ -1,0 +1,30 @@
+@import "../utils/module";
+
+.owl-carousel,
+.owl-stage-outer,
+.owl-stage,
+.owl-item,
+.carousel__item {
+	height: inherit;
+}
+.owl-theme {
+	.owl-nav {
+		display: none;
+		.owl-prev {
+			left: 0;
+		}
+		.owl-next {
+			right: 0;
+		}
+		[class*='owl-'] {
+			bottom: 4.875em;
+			height: 1.5em;
+			position: absolute;
+		}
+	}
+	.owl-dots {
+		bottom: 9.375em;
+		position: absolute;
+		width: 100%;
+	}
+}

@@ -1,0 +1,200 @@
+// Flex-layout
+//
+// Styleguide Utilities.Flex Layout
+
+@mixin --layout {
+    display: flex;
+};
+@mixin --layout-inline {
+    display: inline-flex;
+};
+@mixin --layout-horizontal {
+    @include --layout;
+    flex-direction: row;
+};
+@mixin --layout-horizontal-reverse {
+    @include --layout;
+    flex-direction: row-reverse;
+};
+@mixin --layout-vertical {
+    @include --layout;
+    flex-direction: column;
+};
+@mixin --layout-vertical-reverse {
+    @include --layout;
+    flex-direction: column-reverse;
+};
+@mixin --layout-wrap {
+    flex-wrap: wrap;
+};
+@mixin --layout-wrap-reverse {
+    flex-wrap: wrap-reverse;
+};
+@mixin --layout-flex-auto {
+    flex: 1 1 auto;
+};
+@mixin --layout-flex-none {
+    flex: none;
+};
+@mixin --layout-flex {
+    flex: 1;
+    flex-basis: 0.000000001px;
+};
+@mixin --layout-flex-2 {
+    flex: 2;
+};
+@mixin --layout-flex-3 {
+    flex: 3;
+};
+@mixin --layout-flex-4 {
+    flex: 4;
+};
+@mixin --layout-flex-5 {
+    flex: 5;
+};
+@mixin --layout-flex-6 {
+    flex: 6;
+};
+@mixin --layout-flex-7 {
+    flex: 7;
+};
+@mixin --layout-flex-8 {
+    flex: 8;
+};
+@mixin --layout-flex-9 {
+    flex: 9;
+};
+@mixin --layout-flex-10 {
+    flex: 10;
+};
+@mixin --layout-flex-11 {
+    flex: 11;
+};
+@mixin --layout-flex-12 {
+    flex: 12;
+};
+
+/* alignment in cross axis */
+@mixin --layout-start {
+    align-items: flex-start;
+};
+@mixin --layout-center {
+    align-items: center;
+};
+@mixin --layout-end {
+    align-items: flex-end;
+};
+@mixin --layout-baseline {
+    align-items: baseline;
+};
+@mixin --layout-stretch {
+	align-items: stretch;
+};
+
+/* alignment in main axis */
+@mixin --layout-start-justified {
+    justify-content: flex-start;
+};
+@mixin --layout-center-justified {
+    justify-content: center;
+};
+@mixin --layout-end-justified {
+    justify-content: flex-end;
+};
+@mixin --layout-around-justified {
+    justify-content: space-around;
+};
+@mixin --layout-justified {
+    justify-content: space-between;
+};
+@mixin --layout-center-center {
+    @include --layout-center;
+    @include --layout-center-justified;
+};
+
+/* self alignment */
+@mixin --layout-self-start {
+    align-self: flex-start;
+};
+@mixin --layout-self-center {
+    align-self: center;
+};
+@mixin --layout-self-end {
+    align-self: flex-end;
+};
+@mixin --layout-self-stretch {
+    align-self: stretch;
+};
+@mixin --layout-self-baseline {
+    align-self: baseline;
+};
+
+/* multi-line alignment in main axis */
+@mixin --layout-start-aligned {
+    align-content: flex-start;
+};
+@mixin --layout-end-aligned {
+    align-content: flex-end;
+};
+@mixin --layout-center-aligned {
+    align-content: center;
+};
+@mixin --layout-between-aligned {
+    align-content: space-between;
+};
+@mixin --layout-around-aligned {
+    align-content: space-around;
+};
+
+/*******************************
+Other Layout
+*******************************/
+@mixin --layout-block {
+    display: block;
+};
+@mixin --layout-invisible {
+    visibility: hidden !important;
+};
+@mixin --layout-relative {
+    position: relative;
+};
+@mixin --layout-fit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+};
+@mixin --layout-scroll {
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+};
+@mixin --layout-fullbleed {
+    margin: 0;
+    height: 100vh;
+};
+/* fixed position */
+@mixin --layout-fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+};
+@mixin --layout-fixed-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+};
+@mixin --layout-fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+};
+@mixin --layout-fixed-left {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+};

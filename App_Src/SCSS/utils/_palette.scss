@@ -1,0 +1,89 @@
+$--color-key: 'base' !default;
+
+
+$--colors: (
+    'primary': (
+		'base': #000,
+	),
+	'accent': (
+		'base': #e7212b
+	),
+	'secondary': (
+		'base': #5f687b
+	),
+	'middleground': (
+		'base': #394863
+	),
+	'foreground': (
+		'base': #13274b
+	),
+	'background': (
+		'base':  #fff
+	),
+	'green': (
+		'base': #00894d
+	),
+	'fuscia': (
+		'base': #b32997
+	),
+	'red': (
+		'base': #e7212b
+	),
+	'teal': (
+		'base': #28818f
+	),
+	'gold': (
+		'base': #91711b
+	),
+	'purple': (
+		'base': #6d4797
+	),
+	'orange': (
+		'base': #c84d03
+	),
+);
+
+$--text-colors: (
+    'primary': (
+        'base': #fff,
+        'accent': #fff
+    )
+);
+
+$--opacity: (
+  'light': 0.8, // opacity used with lighter colors
+  'dark': 0.4,  // opacity used with darker colors
+);
+
+@function color($--name: 'primary', $--variant: $--color-key, $--opacity: 1) {
+    $--color: null;
+
+    // Get the color spectrum
+    $--color-spectrum: map-get($--colors, $--name);
+
+    // Get the color variant
+    @if $--color-spectrum {
+        $--color: map-get($--color-spectrum, $--variant);
+    }
+
+    // Get the alpha setting
+    $--alpha: if(type-of($--opacity) == 'number', $--opacity, map-get($--opacity, $--opacity));
+
+    // Set the alpha of the color
+    @if $--alpha {
+        $--color: rgba($--color, $--alpha);
+    }
+
+    @return $--color;
+}
+@function color-alpha($name: 'primary', $opacity: 0) {
+	$color: color($name);
+  
+	// Get the named opacity level, if it exists
+	@if map-key-exists($--opacity, $opacity) {
+	  $opacity: map-get($--opacity, $opacity);
+	}
+  
+	// Use rgba() to manipulate the color's alpha level
+	@return rgba($color, $opacity);
+  }

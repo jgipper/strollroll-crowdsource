@@ -1,0 +1,70 @@
+{
+  "name": "strollroll-crowdsource",
+  "version": "0.0.1",
+  "description": "Crowdsource GIS tool using Vue, Mapbox, and Firebase",
+  "main": "web/index.html",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack --config App_Src/Build/webpack.config.js",
+    "prod": "cross-env NODE_ENV=production webpack --config App_Src/Build/webpack.config.js",
+    "watch": "cross-env NODE_ENV=watch webpack --config App_Src/Build/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgipper/strollroll-crowdsource.git"
+  },
+  "keywords": [
+    "GIS",
+    "Crowdsource"
+  ],
+  "author": "Stroll Roll NE Denver",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jgipper/strollroll-crowdsource/issues"
+  },
+  "homepage": "https://github.com/jgipper/strollroll-crowdsource#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
+    "core-js": "^3.2.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^3.2.0",
+    "cssnano": "^4.1.10",
+    "file-save": "^0.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^7.3.1",
+    "style-loader": "^1.0.0",
+    "vue-loader": "^15.7.1",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7"
+  },
+  "dependencies": {
+    "@mapbox/mapbox-gl-draw": "^1.1.2",
+    "mapbox-gl": "^1.2.1",
+    "mapbox-gl-vue": "^1.9.0",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.2",
+    "vuex": "^3.1.1"
+  },
+  "browserslist": [
+    ">0.1%",
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Edge versions",
+    "last 2 Samsung versions",
+    "Safari >= 9",
+    "ie 8-11",
+    "iOS >= 9"
+  ],
+  "browser": {
+    "fs": false,
+    "path": false,
+    "os": false
+  }
+}
